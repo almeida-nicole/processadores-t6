@@ -29,12 +29,9 @@ a {
 .container {
   width: 960px;
   margin: 0 auto;
-}
-
-@media (max-width: 960px) {
-  .container {
-    width: 100%;
-    padding: 0 4%;
+  @media (max-width: 960px) {
+      width: 100%;
+      padding: 0 4%;
   }
 }
 
@@ -65,19 +62,16 @@ a {
   &__mobile {
   display: none;
   }
-}
 
-@media (max-width: 420px) {
-  .nav {
-    background-color: #fff;
-  }
-
-  .nav__link {
-    display: none;
-  }
-
-  .nav__mobile {
-    display: block;
+  @media (max-width: 420px) {
+      background-color: #fff;
+      &__link {
+        display: none;
+      }
+      &__mobile {
+        display: block;
+      }
+    }
   }
 }
 
@@ -110,14 +104,12 @@ a {
     display: inline-block;
     margin-top: 40px;
   }
+  @media (max-width: 420px) {
+      height: 400px;
+      background-position: -360px 0;
+    }
 }
 
-@media (max-width: 420px) {
-  .banner {
-    height: 400px;
-    background-position: -360px 0;
-  }
-}
 
 @media (max-width: 1024px) {
   .banner__title {
