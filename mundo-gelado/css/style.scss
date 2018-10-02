@@ -54,10 +54,10 @@ a {
   &__link {
   color: #fff;
   margin-right: 50px;
-  
+
   &:hover {
   color: rgba(255, 255, 255, .75);
-    } 
+    }
   }
   &__mobile {
   display: none;
@@ -73,7 +73,7 @@ a {
       }
     }
   }
-}
+
 
 .banner {
   background: url("../images/foto-banner.jpg");
@@ -92,13 +92,22 @@ a {
     font-weight: 100;
     padding-top: 80px;
     letter-spacing: 8px;
-  }
-  
+    @media (max-width: 1024px) {
+        font-size: 80px;
+      }
+    @media (max-width: 850px) {
+         font-size: 60px;
+        }
+    }
+
   &__subtitle {
   color: rgba(255, 255, 255, .7);
   font-size: 22px;
   font-weight: 400;
   line-height: 28px;
+  @media (max-width: 850px) {
+      font-size: 18px;
+    }
   }
   &__btn {
     display: inline-block;
@@ -110,24 +119,6 @@ a {
     }
 }
 
-
-@media (max-width: 1024px) {
-  .banner__title {
-    font-size: 80px;
-  }
-}
-
-@media (max-width: 850px) {
-  .banner__title {
-    font-size: 60px;
-  }
-}
-
-@media (max-width: 850px) {
-  .banner__subtitle {
-    font-size: 18px;
-  }
-}
 
 .btn {
   color: #fff;
@@ -161,6 +152,9 @@ a {
   height: 120px;
   background-color: $cor-primaria;
   display: block;
+  @media (max-width: 960px) {
+      display: none;
+    }
   }
   &__text {
     margin-left: 30px;
@@ -169,39 +163,62 @@ a {
     background: #161616;
     height: inherit;
     width: 50%;
+    @media (max-width: 960px) {
+        width: 100%;
+        text-align: center;
+        padding: 40px;
+      }
 
   &--groenlandia {
     padding-left: 40px;
-
+    @media (max-width: 960px){
+      margin-bottom: 40px;
+    }
   }
 
   &--antartida {
     padding-right: 40px;
     text-align: right;
   }
-}
+
   &__title {
     color: #fff;
     font-size: 24px;
     margin-bottom: 10px;
     margin-top: 80px;
-  }
+    @media (max-width: 960px) {
+        margin-top: 0;
+      }
+    }
     &--siberia {
       display: flex;
       align-items: center;
       justify-content: center;
+      @media (max-width: 960px) {
+          display: block;
+          text-align: center;
+      }
+    }
       &__img {
         max-width: 740px;
         width: 100%;
         height: auto;
         display: block;
-      }
+        @media (max-width: 960px) {
+            max-width: 100%;
+          }
+        }
     }
     &--groenlandia, &--antartida {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 300px;
+
+    @media (max-width: 960px) {
+        display: block;
+        height: auto;
+      }
 
       &__img {
       max-height: 300px;
@@ -212,45 +229,16 @@ a {
       &__wrapper-img {
       width: 50%;
       }
-    } 
+    }
     &_paragraph {
       color: rgba(255,255,255,.5);
       &--groenlandia {
         max-width: 80%;
+        @media (max-width: 960px) {
+            max-width: 100%;
+          }
       }
     }
-}
-
-@media (max-width: 960px) {
-  .destination__border {
-    display: none;
-  }
-}
-
-@media (max-width: 960px) {
-  .destination--siberia {
-    display: block;
-    text-align: center;
-  }
-}
-
-
-@media (max-width: 960px) {
-  .destination--siberia__img {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 960px) {
-  .destination--groenlandia,
-  .destination--antartida {
-    display: block;
-    height: auto;
-  }
-
-  .destination--groenlandia {
-    margin-bottom: 40px;
-  }
 }
 
 @media (max-width: 960px) {
@@ -260,25 +248,6 @@ a {
   }
 }
 
-@media (max-width: 960px) {
-  .destination__description {
-    width: 100%;
-    text-align: center;
-    padding: 40px;
-  }
-}
-
-@media (max-width: 960px) {
-  .destination__title {
-    margin-top: 0;
-  }
-}
-
-@media (max-width: 960px) {
-  .destination_paragraph--groenlandia {
-    max-width: 100%;
-  }
-}
 
 @media (max-width: 960px) {
   .destination--groenlandia__wrapper-img,
